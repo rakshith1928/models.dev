@@ -1,0 +1,24 @@
+# Baseten Kimi K3 Model API page documents 1M context, vision input,
+# reasoning_content output, and configurable reasoning effort: low, high, max.
+# Sources accessed 2026-07-27:
+# https://app.baseten.co/model-apis/kimi-k3
+# https://www.baseten.co/library/kimi-k3/
+
+base_model = "moonshotai/kimi-k3"
+last_updated = "2026-07-27"
+temperature = true
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "high", "max"]
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 3.00
+output = 15.00
+cache_read = 0.30
+
+[modalities]
+input = ["text", "image"]
